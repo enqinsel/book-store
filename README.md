@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# Book Store
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+I created my own database with [JSON Server](https://github.com/typicode/json-server).Then, I used axios api while pulling my data.
 
-## Recommended IDE Setup
+After downloading the project, first install JSON Server from the Terminal. <br><br>
+`npm install -g json-server`
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+Then, <br><br>
+`json-server --watch db.json`
+
+Finall, install the axios api <br><br>
+`npm install axios` or `yarn add axios`
+<hr>
+
+Project preview:
+
+https://user-images.githubusercontent.com/76450122/194771673-ed4545e5-e1d7-46f6-b74e-b11b701f6e78.mp4

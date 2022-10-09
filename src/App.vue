@@ -20,8 +20,8 @@ const newBook = {
     "Sistasdages -- Fiction"
   ],
   formats: {
-        image: "https://www.gutenberg.org/cache/epub/25344/pg25344.cover.medium.jpg"
-      },
+    image: "https://www.gutenberg.org/cache/epub/25344/pg25344.cover.medium.jpg"
+  },
 }
 
 const addedBook = async () => {
@@ -46,11 +46,11 @@ onMounted(async () => {
 
 <template>
   <Suspense>
-      <HeaderButton class="" @click="addedBook"></HeaderButton>
-      <template #fallback>
-        <div class="load">Loading...</div>
-      </template>
-    </Suspense>
+    <HeaderButton class="" @click="addedBook"></HeaderButton>
+    <template #fallback>
+      <div class="load">Loading...</div>
+    </template>
+  </Suspense>
   <div class="container">
     <Suspense>
       <CardComp :data="books" @delClick="deleteHandler"></CardComp>
@@ -66,6 +66,7 @@ onMounted(async () => {
   grid-template-columns: repeat(5, 1fr);
   gap: 24px;
 }
+
 .lds-hourglass {
   display: inline-block;
   width: 80px;
@@ -75,6 +76,7 @@ onMounted(async () => {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .lds-hourglass:after {
   content: " ";
   display: block;
@@ -87,21 +89,24 @@ onMounted(async () => {
   border-color: rgb(248, 0, 0) transparent rgb(255, 247, 0) transparent;
   animation: lds-hourglass 1.2s infinite;
 }
+
 @keyframes lds-hourglass {
   0% {
     transform: rotate(0);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
+
   50% {
     transform: rotate(900deg);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
+
   100% {
     transform: rotate(1800deg);
   }
 }
 
-.load{
+.load {
   position: absolute;
   left: 50%;
   top: 58%;

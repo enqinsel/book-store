@@ -4,12 +4,12 @@ import ButtonComp from "../Button/ButtonComp.vue";
 const props = defineProps(["data"])
 const emits = defineEmits(["delClick"])
 
-const butonHandler = (id) =>{
+const butonHandler = (id) => {
     emits("delClick", id)
 }
 
 const delay = async (ms) => {
-  return new Promise(resolve => setTimeout(resolve, ms));
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 await delay(3000);
